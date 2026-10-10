@@ -1,0 +1,107 @@
+{
+  "posesense_version": "0.1.0",
+  "schema_version": 1,
+  "feature_names": [
+    "nose_x",
+    "nose_y",
+    "left_shoulder_x",
+    "left_shoulder_y",
+    "right_shoulder_x",
+    "right_shoulder_y",
+    "left_elbow_x",
+    "left_elbow_y",
+    "right_elbow_x",
+    "right_elbow_y",
+    "left_wrist_x",
+    "left_wrist_y",
+    "right_wrist_x",
+    "right_wrist_y",
+    "left_hip_x",
+    "left_hip_y",
+    "right_hip_x",
+    "right_hip_y",
+    "left_knee_x",
+    "left_knee_y",
+    "right_knee_x",
+    "right_knee_y",
+    "left_ankle_x",
+    "left_ankle_y",
+    "right_ankle_x",
+    "right_ankle_y",
+    "angle_left_elbow",
+    "angle_right_elbow",
+    "angle_left_shoulder",
+    "angle_right_shoulder",
+    "angle_left_hip",
+    "angle_right_hip",
+    "angle_left_knee",
+    "angle_right_knee",
+    "wrist_y_rel_shoulder_l",
+    "wrist_y_rel_shoulder_r",
+    "wrist_y_rel_nose_l",
+    "wrist_y_rel_nose_r",
+    "wrist_x_midline_l",
+    "wrist_x_midline_r",
+    "wrist_to_opp_shoulder_l",
+    "wrist_to_opp_shoulder_r",
+    "wrist_to_hip_l",
+    "wrist_to_hip_r",
+    "wrist_to_wrist",
+    "hip_knee_dy_l",
+    "hip_knee_dy_r",
+    "knee_ankle_dy_l",
+    "knee_ankle_dy_r",
+    "shoulder_tilt",
+    "torso_inclination",
+    "arm_raised_l",
+    "arm_raised_r"
+  ],
+  "classes": [
+    "Sitting",
+    "Standing",
+    "T-Pose"
+  ],
+  "metrics": {
+    "accuracy": 0.0,
+    "balanced_accuracy": 0.0,
+    "macro_f1": 0.0,
+    "classification_report": {
+      "Standing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "T-Pose": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 100.0
+      },
+      "accuracy": 0.0,
+      "macro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 100.0
+      },
+      "weighted avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 100.0
+      }
+    },
+    "most_confused_pairs": [
+      {
+        "true_label": "T-Pose",
+        "pred_label": "Standing",
+        "count": 100
+      }
+    ],
+    "weakest_class": {
+      "label": "Standing",
+      "f1": 0.0
+    }
+  }
+}

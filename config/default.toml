@@ -1,0 +1,61 @@
+[camera]
+index = 1
+width = 640
+height = 480
+backend = "auto"            # auto | dshow | msmf | v4l2 | avfoundation
+mirror_display = true       # display only; features always use the un-mirrored frame
+reconnect_attempts = 3
+reconnect_backoff_s = 1.0
+black_frame_threshold = 3.0 # mean pixel intensity below this counts as "black"
+black_frame_max_consecutive = 30
+
+[detector]
+model_variant = "lite"      # lite | full | heavy
+model_path = "models/mediapipe/pose_landmarker_lite.task"
+running_mode = "video"      # video | live_stream | image
+num_poses = 1
+min_pose_detection_confidence = 0.5
+min_pose_presence_confidence = 0.5
+min_tracking_confidence = 0.5
+
+[quality]
+min_visibility = 0.5
+min_presence = 0.5
+edge_margin = 0.02          # landmarks closer than this to the frame edge count as clipped
+min_torso_length_norm = 0.08
+required_landmarks = [0, 11, 12, 13, 14, 15, 16, 23, 24, 25, 26, 27, 28]
+
+[features]
+schema_version = 1
+coordinate_source = "image" # image | world
+use_z = false
+center = "mid_hip"
+scale = "torso_length"      # torso_length | shoulder_width
+rotate_to_torso = false
+mirror_augmentation = false # training only
+
+[smoothing]
+landmark_filter = "none"    # none | ema | one_euro
+ema_alpha = 0.5
+vote_window = 7
+min_votes = 4
+no_person_debounce_frames = 5
+
+[rejection]
+min_confidence = 0.60       # placeholder; tuned and stored per model
+min_margin = 0.15           # placeholder; tuned and stored per model
+
+[training]
+random_seed = 42
+default_model = "random_forest"
+test_session_fraction = 0.2
+min_samples_per_class = 30
+imbalance_warning_ratio = 3.0
+
+[performance]
+target_fps = 15
+log_interval_s = 5
+
+[privacy]
+record_video = false
+log_predictions = false

@@ -120,3 +120,7 @@ FrameSource → PoseDetector → QualityGate → FeatureExtractor → PoseClassi
 ## License
 
 [MIT](LICENSE)
+
+to run, 
+.venv\Scripts\activate
+python -m posesense osc --ip 127.0.0.1 --port 39539
